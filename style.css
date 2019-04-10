@@ -1,0 +1,51 @@
+body{
+    background: black;
+    background-image: url("./images/hangman\ background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    top:80%;
+}
+header:hover{
+    color:red;
+}
+h5{
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+#start{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    bottom: 50%;
+    right: 50%;
+    margin-top: -30px;
+    margin-left: -120px;
+    width: 250px;
+    height: 50px;
+    animation-delay: 2s
+    /* border: solid white 5px; */
+}
+@keyframes{
+    0% {
+        
+    }
+}
+#start:hover{
+    box-shadow: 0px 0px 40px white;
+    
+}
+.press{
+    width: 250px;
+    height: 50px;
+    text-align: center;
+}
+.press:hover{
+    color:red;
+    font-size: 26px;
+}
