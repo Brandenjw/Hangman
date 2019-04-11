@@ -1,5 +1,21 @@
 @font-face{
     font-family: pirate; src: url("./fonts/baby_pirate.ttf");
+}
+@font-face{
+    font-family: zombie; src: url("./fonts/Road_Rage.otf");
+}
+.hangman1{
+    background-image: url("./images/zombie.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 25% 55% auto;
+    height: 100vh;
+    width: 96.5vw;
+    border: solid black 30px;
+    margin: 0;
 
 }
 
@@ -7,7 +23,7 @@
 
 .hangman{
     background: black;
-    background-image: url("./images/hangman\ background.gif");
+    background-image: url("./images/city.gif");
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
@@ -26,35 +42,19 @@ h5{
 #start{
     grid-column: 1;
     grid-row: 3;
-    background-color:red;
-    /* position: absolute; */
-    /* top: 80%;
-    left: 50%;
-    bottom: 50%;
-    right: 50%;
-    margin-top: -30px;
-    margin-left: -120px;
-    width: 250px;
-    height: 50px; */
-    animation-delay: 2s
-    /* border: solid white 5px; */
+   padding-top: 40px;
 }
-@keyframes{
-    0% {
 
-    }
-}
-#start:hover{
-    box-shadow: 0px 0px 40px white;
-    background-color: white;
-    
-}
+
 .press{
     width: 250px;
     height: 50px;
     text-align: center;
     background-color: red;
     font-size: 20px;
+    display: block;
+    margin: 0 auto;
+   
 }
 .press:hover{
     color:red;
@@ -135,7 +135,7 @@ h3{
     color:red;
     text-align: center;
     padding-top: 40px;
-    font-family: pirate;
+    font-family: zombie;
     grid-column: 1;
     grid-row: 1;
 }
@@ -151,21 +151,17 @@ h3{
 #outerghost{
     grid-column: 1;
     grid-row: 2;
-    border:solid white;
-    /* background-repeat: no-repeat; */
-    /* display: flex;
-    align-items: center; */
-    
-    
-    
+
 }
 
 .introghost{
     
-    background-image: url("./images/ghost_PNG17.png");
+    /* background-image: url("./images/ghost_PNG17.png"); */
+    opacity: 0.2;
     width: 400px;
     height: 500px;
-    display: flex;
-    align-items:  center;
+    display: block;
+    margin: 0 auto;
+    
     
 }
