@@ -1,24 +1,24 @@
+@font-face{
+    font-family: pirate; src: url("./fonts/baby_pirate.ttf");
+
+}
+
+
+
 body{
     background: black;
     background-image: url("./images/hangman\ background.gif");
     background-repeat: no-repeat;
     background-size: cover;
 }
-header{
-    text-align: center;
-    color: white;
-    font-size: 80px;
-    top:80%;
-}
-header:hover{
-    color:red;
-}
+
 h5{
     text-align: center;
     color: white;
     font-size: 14px;
 }
 #start{
+    background-color:red;
     position: absolute;
     top: 80%;
     left: 50%;
@@ -33,19 +33,105 @@ h5{
 }
 @keyframes{
     0% {
-        
+
     }
 }
 #start:hover{
     box-shadow: 0px 0px 40px white;
+    background-color: white;
     
 }
 .press{
     width: 250px;
     height: 50px;
     text-align: center;
+    background-color: red;
+    font-size: 20px;
 }
 .press:hover{
     color:red;
     font-size: 26px;
+    background-color: white;
+}
+.gameintro{
+    text-align: center;
+    color: red;
+    font-size: 80px;
+    top:80%;
+    font-family: pirate;
+}
+.gameintro:hover{
+    color:white;
+}
+.category{
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    bottom: 50%;
+    right: 50%;
+    margin-top: -30px;
+    margin-left: -120px;
+    width: 350px;
+    height: 50px;
+    border: solid white;
+    background-color: whitesmoke;
+    text-align: center;
+    font-size: 36px;
+    
+}
+#array{
+    color:white;
+    font-size: 28px;
+    display: none;
+}
+#over{
+    width: 300px;
+    height: 30px;
+    background-color: white;
+    border: solid red;
+    text-align: center;
+    font-size: 32px;
+    position: absolute;
+    top: 90%;
+    left: 47%;
+    bottom: 80%;
+    right: 50%;
+    margin-left: -120px;
+}
+h3{
+    color: white;
+    font-size: 26px;
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    bottom: 50%;
+    right: 50%;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.restart{
+    font-size: 20px;
+    top: 80%;
+    text-align: center;
+    width: 300px;
+    height: 30px;
+    background: red;
+}
+.restart:hover{
+    font-size: 24px;
+    box-shadow: 0px 0px 40px white;
+    
+    
+
+}
+.intro{
+    font-size: 80px;
+    color:red;
+    padding-left: 300px;
+    font-family: pirate;
+}
+.intro:hover{
+    font-size: 110px;
+    color:white;
+    box-shadow: 0px 0px 40px red;
 }
