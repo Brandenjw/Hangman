@@ -5,11 +5,17 @@
 
 
 
-body{
+.hangman{
     background: black;
     background-image: url("./images/hangman\ background.gif");
     background-repeat: no-repeat;
     background-size: cover;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 25% 55% auto;
+    height: 100vh;
+    width: 100vw;
 }
 
 h5{
@@ -18,16 +24,18 @@ h5{
     font-size: 14px;
 }
 #start{
+    grid-column: 1;
+    grid-row: 3;
     background-color:red;
-    position: absolute;
-    top: 80%;
+    /* position: absolute; */
+    /* top: 80%;
     left: 50%;
     bottom: 50%;
     right: 50%;
     margin-top: -30px;
     margin-left: -120px;
     width: 250px;
-    height: 50px;
+    height: 50px; */
     animation-delay: 2s
     /* border: solid white 5px; */
 }
@@ -121,17 +129,43 @@ h3{
     font-size: 24px;
     box-shadow: 0px 0px 40px white;
     
-    
-
 }
 .intro{
     font-size: 80px;
     color:red;
-    padding-left: 300px;
+    text-align: center;
+    padding-top: 40px;
     font-family: pirate;
+    grid-column: 1;
+    grid-row: 1;
 }
-.intro:hover{
-    font-size: 110px;
+
+
+#alphabet{
+    cursor: crosshair;
+    text-align: center;
     color:white;
-    box-shadow: 0px 0px 40px red;
+    font-size: 18px;
+    background-color:black;
+}
+#outerghost{
+    grid-column: 1;
+    grid-row: 2;
+    border:solid white;
+    /* background-repeat: no-repeat; */
+    /* display: flex;
+    align-items: center; */
+    
+    
+    
+}
+
+.introghost{
+    
+    background-image: url("./images/ghost_PNG17.png");
+    width: 400px;
+    height: 500px;
+    display: flex;
+    align-items:  center;
+    
 }
