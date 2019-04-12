@@ -13,22 +13,27 @@
 </head>
 <header class="gameintro">Dead Men Hang</header>
 
-<body>
-    <h3>Category</h3>
+<body class="hangman">
+    <h3 class="titlecat">Category</h3>
     <div class="category">
-Movie Quotes
+        Movie Quotes
     </div>
-    <div class="worddisplay">
-
-    </div>
-    <div class="array">
-
+    <div class="worddisplay">"_ _ _ _ _ _ _ _ _"</div>
+    <div id="array" onclick="ghostWords()">
+        BANGARANG
     </div>
     <div class="usedlets">
-
+    </div>
+    <div id="sub">
+        
+        <input class="sub2" type="text" value="">
+    </form>
+    </div>
+    <div id="alphabet">
+       
     </div>
     <div id="over">
-            <button class="restart" onclick="pageOne()">START OVER</button type="submit"></button>
+        <button class="restart" onclick="pageOne()">START OVER</button type="submit"></button>
     </div>
 
 </body>
