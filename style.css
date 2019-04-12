@@ -196,7 +196,7 @@ h3{
 .worddisplay{
     color:white;
     font-size: 50px;
-    border: solid wheat;
+    /* border: solid wheat; */
     height: 10px;
     width: 400px;
     grid-column: 1;
@@ -205,5 +205,11 @@ h3{
     padding: 300px;
     display: block;
     margin: 0 auto;
-    top: 40%;
+    position: absolute;
+    top: 0%;
+    left: 16%;
+    bottom: 50%;
+    right: 50%;
+    margin-top: 30px;
+    margin-left: 20px;
 }
