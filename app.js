@@ -5,24 +5,36 @@ function pageOne() {
     location.replace("index.html")
 }
 
-const alphabetList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","z"]
+const alphabetArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","z"]
 
-const guessedWord = function (keyWords, userImput) {
-    // if(userImput)
-
-    var keyWords = ['b', 'o', 'g', 'e', 'y', 'm', 'a', 'n'];
-
-    for (let i = 0; i > keyWords.length; i++) {
-        var key = keyWords[i].toLowerCase();
-i
+for(var i = alphabetArray.length - 1; i >= 0; i--){
+    $(".alphabetList").prepend("<div class='letters'>" + alphabetArray[i] + "</div>")
+}
+let checkLetter =(answer)=>{
+    let value = $(event.target).html()
+    console.log(value)
+    for(let i = answer.length -1 ; i >= 0; i--){
+        if(value === answer[i]){
+            return true;
+        }
     }
-
 }
-var rightAnswer = [];
-for (var i = 0; i < randomWord.length; i++) {
+// const guessedWord = function (keyWords, userImput) {
+//     // if(userImput)
 
-    rightAnswer[i] = "_";
-}
+//     var keyWords = ['b', 'o', 'g', 'e', 'y', 'm', 'a', 'n'];
+
+//     for (let i = 0; i > keyWords.length; i++) {
+//         var key = keyWords[i].toLowerCase();
+// i
+//     }
+
+// }
+// var rightAnswer = [];
+// for (var i = 0; i < randomWord.length; i++) {
+
+//     rightAnswer[i] = "_";
+// }
 
 
 
@@ -46,5 +58,3 @@ var usedLetters = [];
 // let heyYou = prompt("guess a type of monster");
 // }
 // if()
-
-
