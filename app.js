@@ -5,7 +5,7 @@ function pageOne() {
     location.replace("index.html")
 }
 
-
+const alphabetList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","z"]
 
 const guessedWord = function (keyWords, userImput) {
     // if(userImput)
@@ -14,16 +14,14 @@ const guessedWord = function (keyWords, userImput) {
 
     for (let i = 0; i > keyWords.length; i++) {
         var key = keyWords[i].toLowerCase();
-
+i
     }
 
+}
+var rightAnswer = [];
+for (var i = 0; i < randomWord.length; i++) {
 
-
-
-
-
-
-
+    rightAnswer[i] = "_";
 }
 
 
@@ -37,15 +35,10 @@ const guessedWord = function (keyWords, userImput) {
 //this is array for letters incorrect and not in keyword
 var usedLetters = [];
 //this is array of words to be used in game
-var keyWords = ["banshee", "bogeyman", "ghost", "gargoyle", "mummy", "titan", "undead"]
+// var keyWords = ["banshee", "bogeyman", "ghost", "gargoyle", "mummy", "titan", "undead"]
 //this allows for words to be chosen at random
-var randomWord = keyWords[Math.floor(Math.random() * keyWords.length)];
+// var randomWord = keyWords[Math.floor(Math.random() * keyWords.length)];
 //this accounts for number of letters per word on screen
-var rightAnswer = [];
-for (var i = 0; i < randomWord.length; i++) {
-
-    rightAnswer[i] = "_";
-}
 //displays guesses left
 // var lettersLeft = randomWord.length;
 
