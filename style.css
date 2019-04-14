@@ -217,7 +217,28 @@ h3{
     margin-left: 20px;
 }
 .won{
-    background-image: url("./images/MJ.gif");
+    background-image: url("./images/patrick.gif");
     background-repeat: no-repeat;
     background-size: cover;
+}
+.lose{
+    background-image: url("./images/loser.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.loserText{
+    color:white;
+    font-size: 50px;
+
+}
+#yay{
+    color:white;
+    font-size: 60px;
+    position: absolute;
+    top: 40%;
+    left: 16%;
+    bottom: 50%;
+    right: 50%;
+    margin-top: 30px;
+    margin-left: 20px;
 }
