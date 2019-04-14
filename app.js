@@ -8,7 +8,7 @@ function pageOne() {
 const alphabetArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","z"]
 
 for(var i = alphabetArray.length - 1; i >= 0; i--){
-    $(".alphabetList").prepend("<div class='letters'>" + alphabetArray[i] + "</div>")
+    $(".alphabetList").prepend("<div class='lettersType'>" + alphabetArray[i] + "</div>")
 }
 let checkLetter =(answer)=>{
     let value = $(event.target).html()
@@ -19,6 +19,10 @@ let checkLetter =(answer)=>{
         }
     }
 }
+$(".alphabetList").on("click", ".lettersType", checkLetter)
+
+
+
 // const guessedWord = function (keyWords, userImput) {
 //     // if(userImput)
 
