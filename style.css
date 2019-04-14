@@ -171,7 +171,8 @@ h3{
     font-size: 18px;
    grid-column: 1;
     grid-row: 2;
-    text-align: justify;
+    display: inline-flex;
+    justify-content: space-between;
     
 }
 #outerghost{
