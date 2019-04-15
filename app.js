@@ -1,21 +1,26 @@
+//link to game from landing page
 function pageTwo() {
     location.replace("./gameplay.html")
 }
+//link back to landing page "start over"
 function pageOne() {
     location.replace("index.html")
 }
+//array for alphabet
+const alphabetArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
-const alphabetArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","z"]
-
+//creates a div for each letter typed and displays it on screen
 for(var i = alphabetArray.length - 1; i >= 0; i--){
     $(".alphabetList").prepend("<div class='lettersType'>" + alphabetArray[i] + "</div>")
 }
-let checkLetter =(answer)=>{
+let checkLetter =()=>{
     let value = $(event.target).html()
-    console.log(value)
-    for(let i = answer.length -1 ; i >= 0; i--){
-        if(value === answer[i]){
-            return true;
+    // console.log(value)
+let word = ["b","o","o","g","e","y","m","a","n"]
+    for(let i = 0 ; i < word.length -1; i++){
+        if(value === word[i]){
+        console.log(value)
+              return true;
         }
     }
 }
