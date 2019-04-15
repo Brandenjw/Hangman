@@ -17,10 +17,11 @@ let checkLetter =()=>{
     let value = $(event.target).html()
     // console.log(value)
 let word = ["b","o","o","g","e","y","m","a","n"]
-    for(let i = 0 ; i < word.length -1; i++){
+    for(let i = 0 ; i < word.length; i++){
         if(value === word[i]){
         console.log(value)
-              return true;
+
+            //   return true;
         }
     }
 }
