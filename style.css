@@ -257,6 +257,9 @@ h3{
     margin-left: 20px;
 }
 .keyEntry{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     border: white solid;
     height: 30px;
     width: 300px;
@@ -268,4 +271,5 @@ h3{
     right: 50%;
     margin-top: 30px;
     margin-left: 20px;
+    color: white;
 }

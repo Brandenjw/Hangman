@@ -13,40 +13,35 @@ const alphabetArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","
 for(var i = alphabetArray.length - 1; i >= 0; i--){
     $(".alphabetList").prepend("<div class='lettersType'>" + alphabetArray[i] + "</div>")
 }
-let word = ["b","o","o","g","e","y","m","a","n"]
-let correctLetters = [] 
+var word = ["b","o","o","g","e","y","m","a","n"]
+var correctLetters = [] 
 for(let i = 0 ; i < word.length; i++){
-    correctLetters.push("-")
-    // console.log(correctLetters)
+    $(correctLetters).push('"-"')
+    
 }
-console.log(correctLetters)
-// $(".keyEntry").append(correctLetters)
-
-
-$(".alphabetList").on("click", ".lettersType", ()=>{
-    let value = $(event.target).html()
+$(".keyEntry").append(correctLetters)
+var checkLetter =()=>{
+    var value = $(event.target).html()
     
     //this allows for only letters in keyword to be typed
 
-    // for(let i = 0 ; i < word.length; i++){
+    for(let i = 0 ; i < word.length; i++){
+        
 
         if(value === word[i]){
-            let splice = correctLetters.splice(`${i}, ${1}, ${value}`)
-            correctLetters.push(splice)
-            $(".keyEntry").append(splice)
-            console.log(splice)
            console.log(value)
-
-
-        // }
-    //    else{
-    //         console.log("wrong letter = " + value)
+           correctLetters[i].push(value)
         }
-    // }
-    // console.log(correctLetters)
+       else{
+            console.log("wrong letter = " + value)
+        }
+    }
+    console.log(correctLetters)
     $(".usedLets").append("<p class='wrongOnes'>" + value + "</p>")
     }
-)
+
+$(".alphabetList").on("click", ".lettersType", checkLetter)
+
 // replaceChildText(document.getElementsByClassName('correctWord'),'findText','replacement');
 
 // const guessedWord = function (keyWords, userImput) {
