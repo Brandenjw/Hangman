@@ -22,5 +22,14 @@ for (var i = 0; i < userGuess.length; i++){
 	userGuess[i] = "_ ";
 }
 
+function displayUserGuess(){
+	for (var i = 0; i < userGuess.length; i++){
+	let guessBox = document.getElementById("guessBox");
+	let letterShow = document.createTextNode(userGuess[i]);
+	userGuess.appendChild(letterShow);
+	}
+}
+
+
 
 
