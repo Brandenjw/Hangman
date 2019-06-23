@@ -14,7 +14,9 @@ let randomArray = Math.floor((Math.random()*(wordArrays.length-1)));
 
 let wordArray = wordArrays[random];
 
+let userGuess = new Array(wordArray.length);
 
+let wrongAnswer = 0;
 
 
 
