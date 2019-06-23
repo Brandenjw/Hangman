@@ -18,5 +18,9 @@ let userGuess = new Array(wordArray.length);
 
 let wrongAnswer = 0;
 
+for (var i = 0; i < userGuess.length; i++){
+	userGuess[i] = "_ ";
+}
+
 
 
