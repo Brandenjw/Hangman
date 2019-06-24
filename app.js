@@ -33,8 +33,8 @@ function displayUserGuess(){
 //checks if the the letter provided by the user matches one or more of the letters in the word
 let checkLetter = function(){
 	let form  = document.entry; 
-	let b = form.elements["guessSelect"]; 
-	let characters = b.value; 
+	let fill = form.elements["guessSelect"]; 
+	let characters = fill.value; 
 	characters = characters.toUpperCase();
 	for (var i = 0; i < wordArray.length; i++){
 		if(wordArray[i] === characters){
@@ -44,7 +44,27 @@ let checkLetter = function(){
 	b.value = "";
 	}}
 
-//deletes the guessfield and replaces it with the new one 
 let guessBox = document.getElementById("guessBox");
 guessBox.innerHTML=""; 
 printUserGuess();
+
+//checks if all letters have been found
+let final = true;
+for (var i = 0; i < userGuess.length; i++){
+    if(userGuess[i] === "_ "){
+        final = false;
+    }
+}
+if(final){
+    window.alert("You win!");
+}
+
+if(final === 6){
+    window.alert("You have DIED.");
+}
+
+function init(){
+	printUserGuess();
+}
+
+window.onload = init;
