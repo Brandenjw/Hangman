@@ -7,18 +7,22 @@ function pageOne() {
   location.replace("index.html");
 }
 //array for keywords
-const wordArrays = [ "ghost", "zombie", "outbreak", "fear", "run", "hide"];
+const wordArrays = ["ghost", "zombie", "outbreak", "fear", "run", "hide"];
+
+//array for correct and wrong answers
 let yes = [];
 let no = [];
 let answerArray = [];
+
+//randomizer for keywords
 let randomWord = [Math.floor(Math.random() * wordArrays.length)];
 let exactWord = wordArrays[randomWord];
 console.log(exactWord);
 
-let letterDash = document.getElementsByClassName('under');
-let correctWord = document.getElementsByClassName('correct');
-let wrongWord = document.getElementsByClassName('wrong');
-
+//dom manipulation variables
+let letterDash = document.getElementsByClassName("under");
+let correctWord = document.getElementsByClassName("correct");
+let wrongWord = document.getElementsByClassName("wrong");
 
 
 let underScore = () => {
@@ -38,22 +42,19 @@ document.addEventListener("keypress", event => {
   if (exactWord.indexOf(letterPress) > -1) {
     // console.log(true);
     yes.push(letterPress);
-    
-    
+
     answerArray[exactWord.indexOf(letterPress)] = letterPress;
-    letterDash[0].innerHTML = answerArray.join(' ');
+    letterDash[0].innerHTML = answerArray.join(" ");
     correctWord[0].innerHTML = yes;
-    if(answerArray.join('') == exactWord) {
-        alert('YOU WIN');
+    if (answerArray.join("") == exactWord) {
+      alert("YOU WIN");
     }
-}
-else {
+  } else {
+      //incorrect letter loses game. 
     no.push(letterPress);
     wrongWord[0].innerHTML = no;
-    alert('YOU LOSE')
-}
+    alert("YOU LOSE");
+  }
 });
 
-letterDash[0].innerHTML = underScore().join(' ');
-
-
+letterDash[0].innerHTML = underScore().join(" ");

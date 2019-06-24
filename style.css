@@ -180,11 +180,7 @@ h3{
     margin:  25px auto;
     width: 80%;
     height: 160px;
-    /* position: absolute;
-    top: 20%;
-    left: 45%;
-    bottom: 50%;
-    right: 50%; */
+   
 
 
 
@@ -198,6 +194,7 @@ h3{
     margin: 25px auto;
     width: 80%;
     height: 160px;
+    opacity: 0.5;
 }
 .wrong{
     color: red;
@@ -208,4 +205,5 @@ h3{
     margin: 25px auto;
     width: 80%;
     height: 160px;
+    opacity: 0.3;
 }
