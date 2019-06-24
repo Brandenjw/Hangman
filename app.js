@@ -30,6 +30,21 @@ function displayUserGuess(){
 	}
 }
 
+//checks if the the letter provided by the user matches one or more of the letters in the word
+let checkLetter = function(){
+	let form  = document.entry; 
+	let b = form.elements["guessSelect"]; 
+	let characters = b.value; 
+	characters = characters.toUpperCase();
+	for (var i = 0; i < wordArray.length; i++){
+		if(wordArray[i] === characters){
+			userGuess[i] = characters + " ";
+			let correct = true;
+		}
+	b.value = "";
+	}}
 
-
-
+//deletes the guessfield and replaces it with the new one 
+let guessBox = document.getElementById("guessBox");
+guessBox.innerHTML=""; 
+printUserGuess();
