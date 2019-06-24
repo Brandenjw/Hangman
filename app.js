@@ -23,6 +23,15 @@ let underScore = () => {
 }
 console.log(underScore());
 
+document.addEventListener('keypress', (event) => {
+    // console.log(event);
+    let key = event.keyCode;
+    let letterPress = String.fromCharCode(key)
+    // console.log(letterPress);
+    if(exactWord.indexOf(letterPress) > -1) {
+        console.log(true);
+    }
+});
 
 // let wordArray = wordArrays.random;
 

@@ -1,6 +1,4 @@
-@font-face{
-    font-family: pirate; src: url("./fonts/baby_pirate.ttf");
-}
+
 @font-face{
     font-family: zombie; src: url("./fonts/Road_Rage.otf");
 }
@@ -26,10 +24,6 @@
     background-image: url("./images/city.gif");
     background-repeat: no-repeat;
     background-size: cover;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr ;
-    grid-template-rows: 25% 55% auto;
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -96,21 +90,7 @@ h5{
     grid-row: 1;
     
 }
-#array{
-    color:white;
-    font-size: 28px;
-    display: none;
-    grid-column: 1;
-    grid-row: 2;
-    border: solid wheat;
-    /* width: 100px;
-    height: 20px; */
-}
-.usedlets{
-    grid-column: 2;
-    grid-row: 1;
-    border:solid black;
-}
+
 #over{
     width: 300px;
     height: 30px;
@@ -164,30 +144,7 @@ h3{
 }
 
 
-.{
-    /* cursor: crosshair; */
-    /* text-align: center; */
-    color:white;
-    font-size: 24px;
-    display: grid;
-   grid-column: 1;
-    grid-row: 2;
-    display: flex;
-    flex-direction: row;
-   justify-content:space-between;
-   position: absolute;
-    top: 70%;
-    left: 25%;
-    bottom: 50%;
-    right: 0%;
-    margin-top: 30px;
-    margin-left: 20px;
-    word-spacing: 10em;
-    border: solid white;
-    height: 30px;
-    width: 700px;
-    
-}
+
 #outerghost{
     grid-column: 1;
     grid-row: 2;
@@ -210,66 +167,45 @@ h3{
     grid-row: 3;
     /* border: solid white; */
 }
-.guessBox{
-    color:white;
-    font-size: 50px;
-    /* border: solid wheat; */
-    height: 10px;
-    width: 400px;
-    grid-column: 1;
-    grid-row: 2;
+.headBox{
+    /* border: solid white; */
+    height: 50px;
+}
+.under{
+    color: red;
+    border: solid white;
+    font-family: zombie;
     text-align: center;
-    padding: 300px;
-    display: block;
-    margin: 0 auto;
-    position: absolute;
-    top: 0%;
-    left: 16%;
+    font-size: 100px;
+    margin:  25px auto;
+    width: 80%;
+    height: 160px;
+    /* position: absolute;
+    top: 20%;
+    left: 45%;
     bottom: 50%;
-    right: 50%;
-    margin-top: 30px;
-    margin-left: 20px;
-}
-.won{
-    background-image: url("./images/patrick.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.lose{
-    background-image: url("./images/loser.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.loserText{
-    color:white;
-    font-size: 50px;
+    right: 50%; */
+
+
 
 }
-#yay{
-    color:white;
-    font-size: 60px;
-    position: absolute;
-    top: 40%;
-    left: 16%;
-    bottom: 50%;
-    right: 50%;
-    margin-top: 30px;
-    margin-left: 20px;
+.correct{
+    color: red;
+    border: solid white;
+    font-family: zombie;
+    text-align: center;
+    font-size: 40px;
+    margin: 25px auto;
+    width: 80%;
+    height: 160px;
 }
-.guessSelect{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border: white solid;
-    height: 30px;
-    width: 300px;
-    background: gray;
-    position: absolute;
-    top: 40%;
-    left: 38%;
-    bottom: 50%;
-    right: 50%;
-    margin-top: 30px;
-    margin-left: 20px;
-    color: white;
+.wrong{
+    color: red;
+    border: solid white;
+    font-family: zombie;
+    text-align: center;
+    font-size: 40px;
+    margin: 25px auto;
+    width: 80%;
+    height: 160px;
 }
