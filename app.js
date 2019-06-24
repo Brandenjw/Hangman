@@ -6,65 +6,77 @@ function pageTwo() {
 function pageOne() {
     location.replace("index.html")
 }
-//array for alphabet
-const wordArrays =[ ["B","O","O","G","E","Y","M","A","N"],
-["G","H","O","S","T","S"],["Z","O","M","B","I","E","S"]]
+//array for keywords
+const wordArrays =['boogeyman', 'ghosts', 'zombie', 'outbreak'];
 
-let randomArray = Math.floor((Math.random()*(wordArrays.length-1)));
+let randomWord = [Math.floor(Math.random() * wordArrays.length)];
+let exactWord = wordArrays[randomWord];
+console.log(exactWord)
 
-let wordArray = wordArrays[random];
+let answerArray = [];
 
-let userGuess = new Array(wordArray.length);
-
-let wrongAnswer = 0;
-
-for (var i = 0; i < userGuess.length; i++){
-	userGuess[i] = "_ ";
+let underScore = () => {
+    for (let i = 0; i < exactWord.length; i++) {
+        answerArray.push('_');
+    } 
+    return answerArray;
 }
+console.log(underScore());
 
-function displayUserGuess(){
-	for (var i = 0; i < userGuess.length; i++){
-	let guessBox = document.getElementById("guessBox");
-	let letterShow = document.createTextNode(userGuess[i]);
-	userGuess.appendChild(letterShow);
-	}
-}
 
-//checks if the the letter provided by the user matches one or more of the letters in the word
-let checkLetter = function(){
-	let form  = document.entry; 
-	let fill = form.elements["guessSelect"]; 
-	let characters = fill.value; 
-	characters = characters.toUpperCase();
-	for (var i = 0; i < wordArray.length; i++){
-		if(wordArray[i] === characters){
-			userGuess[i] = characters + " ";
-			let correct = true;
-		}
-	b.value = "";
-	}}
+// let wordArray = wordArrays.random;
 
-let guessBox = document.getElementById("guessBox");
-guessBox.innerHTML=""; 
-printUserGuess();
+// let userGuess = new Array(wordArray.length);
 
-//checks if all letters have been found
-let final = true;
-for (var i = 0; i < userGuess.length; i++){
-    if(userGuess[i] === "_ "){
-        final = false;
-    }
-}
-if(final){
-    window.alert("You win!");
-}
+// let wrongAnswer = 0;
 
-if(final === 6){
-    window.alert("You have DIED.");
-}
+// for (var i = 0; i < userGuess.length; i++){
+// 	userGuess[i] = "_ ";
+// }
 
-function init(){
-	printUserGuess();
-}
+// function displayUserGuess(){
+// 	for (var i = 0; i < userGuess.length; i++){
+// 	let guessBox = document.getElementById("guessBox");
+// 	let letterShow = document.createTextNode(userGuess[i]);
+// 	userGuess.appendChild(letterShow);
+// 	}
+// }
 
-window.onload = init;
+// //checks if the the letter provided by the user matches one or more of the letters in the word
+// let checkLetter = function(){
+// 	let form  = document.entry; 
+// 	let fill = form.elements["guessEntry"]; 
+// 	let characters = fill.value; 
+// 	characters = characters.toUpperCase();
+// 	for (var i = 0; i < wordArray.length; i++){
+// 		if(wordArray[i] === characters){
+// 			userGuess[i] = characters + " ";
+// 			let correct = true;
+// 		}
+// 	b.value = "";
+// 	}}
+
+// let guessBox = document.getElementById("guessBox");
+// guessBox.innerHTML=""; 
+// printUserGuess();
+
+// //checks if all letters have been found
+// let final = true;
+// for (var i = 0; i < userGuess.length; i++){
+//     if(userGuess[i] === "_ "){
+//         final = false;
+//     }
+// }
+// if(final){
+//     window.alert("You win!");
+// }
+
+// if(final === 6){
+//     window.alert("You have DIED.");
+// }
+
+// function init(){
+// 	printUserGuess();
+// }
+
+// window.onload = init;
