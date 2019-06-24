@@ -1,91 +1,59 @@
 //link to game from landing page
 function pageTwo() {
-    location.replace("./gameplay.html")
+  location.replace("./gameplay.html");
 }
 //link back to landing page "start over"
 function pageOne() {
-    location.replace("index.html")
+  location.replace("index.html");
 }
 //array for keywords
-const wordArrays =['boogeyman', 'ghosts', 'zombie', 'outbreak'];
-
+const wordArrays = [ "ghost", "zombie", "outbreak", "fear", "run", "hide"];
+let yes = [];
+let no = [];
+let answerArray = [];
 let randomWord = [Math.floor(Math.random() * wordArrays.length)];
 let exactWord = wordArrays[randomWord];
-console.log(exactWord)
+console.log(exactWord);
 
-let answerArray = [];
+let letterDash = document.getElementsByClassName('under');
+let correctWord = document.getElementsByClassName('correct');
+let wrongWord = document.getElementsByClassName('wrong');
+
+
 
 let underScore = () => {
-    for (let i = 0; i < exactWord.length; i++) {
-        answerArray.push('_');
-    } 
-    return answerArray;
-}
-console.log(underScore());
+  for (let i = 0; i < exactWord.length; i++) {
+    answerArray.push("_");
+    // letterDash[0].innerHTML = answerArray.join(' ');
+  }
+  return answerArray;
+};
+// console.log(underScore());
 
-document.addEventListener('keypress', (event) => {
-    // console.log(event);
-    let key = event.keyCode;
-    let letterPress = String.fromCharCode(key)
-    // console.log(letterPress);
-    if(exactWord.indexOf(letterPress) > -1) {
-        console.log(true);
+document.addEventListener("keypress", event => {
+  // console.log(event);
+  let key = event.keyCode;
+  let letterPress = String.fromCharCode(key);
+  // console.log(letterPress);
+  if (exactWord.indexOf(letterPress) > -1) {
+    // console.log(true);
+    yes.push(letterPress);
+    
+    
+    answerArray[exactWord.indexOf(letterPress)] = letterPress;
+    letterDash[0].innerHTML = answerArray.join(' ');
+    correctWord[0].innerHTML = yes;
+    if(answerArray.join('') == exactWord) {
+        alert('YOU WIN');
     }
+}
+else {
+    no.push(letterPress);
+    wrongWord[0].innerHTML = no;
+    alert('YOU LOSE')
+}
 });
 
-// let wordArray = wordArrays.random;
+letterDash[0].innerHTML = underScore().join(' ');
 
-// let userGuess = new Array(wordArray.length);
 
-// let wrongAnswer = 0;
-
-// for (var i = 0; i < userGuess.length; i++){
-// 	userGuess[i] = "_ ";
-// }
-
-// function displayUserGuess(){
-// 	for (var i = 0; i < userGuess.length; i++){
-// 	let guessBox = document.getElementById("guessBox");
-// 	let letterShow = document.createTextNode(userGuess[i]);
-// 	userGuess.appendChild(letterShow);
-// 	}
-// }
-
-// //checks if the the letter provided by the user matches one or more of the letters in the word
-// let checkLetter = function(){
-// 	let form  = document.entry; 
-// 	let fill = form.elements["guessEntry"]; 
-// 	let characters = fill.value; 
-// 	characters = characters.toUpperCase();
-// 	for (var i = 0; i < wordArray.length; i++){
-// 		if(wordArray[i] === characters){
-// 			userGuess[i] = characters + " ";
-// 			let correct = true;
-// 		}
-// 	b.value = "";
-// 	}}
-
-// let guessBox = document.getElementById("guessBox");
-// guessBox.innerHTML=""; 
-// printUserGuess();
-
-// //checks if all letters have been found
-// let final = true;
-// for (var i = 0; i < userGuess.length; i++){
-//     if(userGuess[i] === "_ "){
-//         final = false;
-//     }
-// }
-// if(final){
-//     window.alert("You win!");
-// }
-
-// if(final === 6){
-//     window.alert("You have DIED.");
-// }
-
-// function init(){
-// 	printUserGuess();
-// }
-
-// window.onload = init;
